@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Review;
+use App\Models\Service;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,11 +15,46 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        Service::insert([
+            [
+                "name" => 'Cutting',
+                "duration" => 60,
+            ],
+            [
+                "name" => 'Coloring',
+                "duration" => 60,
+            ],
+            [
+                "name" => 'Blow',
+                "duration" => 30,
+            ],
+            [
+                "name" => 'Smoothing',
+                "duration" => 90,
+            ],
+        ]);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        Review::insert([
+            [
+                "name" => "Angel",
+                "rating" => 5,
+                "comment" => "a",
+            ],
+            [
+                "name" => "Natasha",
+                "rating" => 5,
+                "comment" => "a",
+            ],
+            [
+                "name" => "Michelle",
+                "rating" => 5,
+                "comment" => "a",
+            ],
+            [
+                "name" => "Jessica",
+                "rating" => 5,
+                "comment" => "a",
+            ],
+        ]);
     }
 }

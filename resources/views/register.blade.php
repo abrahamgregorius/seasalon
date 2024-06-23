@@ -11,7 +11,7 @@
 
 
     <div class="flex w-full items-center justify-center p-8">
-        <div class="rounded-lg border py-4 px-2 bg-card text-card-foreground shadow-sm w-full max-w-md" data-v0-t="card">
+        <div class="rounded-lg border py-4 px-2 bg-card text-card-foreground shadow-lg w-full max-w-md" data-v0-t="card">
             <div class="flex flex-col pt-6 items-center text-center">
                 <h3 class="text-3xl font-bold">Welcome</h3>
                 <p class="text-slate-600 w-[75%]">Log in to access full features of SEA Salon</p>
