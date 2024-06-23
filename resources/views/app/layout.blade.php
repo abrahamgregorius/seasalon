@@ -76,7 +76,9 @@
     <div class="footer border-t-2 p-8">
         <div class="container flex flex-col sm:flex-row gap-4 sm:items-start sm:justify-between w-full max-w-[1200px] mx-auto my-0">
             <div class="footer-left flex">
-                <h1 class="text-2xl font-bold">SEASalon</h1>
+                <a href="/">
+                    <h1 class="text-2xl font-bold">SEASalon</h1>
+                </a>
             </div>
             <div class="footer-right flex flex-col gap-4 sm:gap-12 sm:items-start sm:flex-row">
                 <div class="f-menu-1 flex flex-col gap-1"> {{-- Footer Menu 1 --}}
@@ -85,16 +87,16 @@
                     </div>
                     <div class="fm1-body">
                         <ul class="flex flex-col gap-1">
-                            <a href="/">
+                            <a class="text-slate-800 hover:text-slate-600 transition" href="/">
                                 <li>Home</li>
                             </a>
-                            <a href="/services">
+                            <a class="text-slate-800 hover:text-slate-600 transition" href="/services">
                                 <li>Services</li>
                             </a>
-                            <a href="/reservations">
+                            <a class="text-slate-800 hover:text-slate-600 transition" href="/reservations">
                                 <li>Reservations</li>
                             </a>
-                            <a href="/reviews">
+                            <a class="text-slate-800 hover:text-slate-600 transition" href="/reviews">
                                 <li>Reviews</li>
                             </a>
                         </ul>
@@ -106,16 +108,16 @@
                     </div>
                     <div class="fm2-body">
                         <ul class="flex flex-col gap-1">
-                            <a href="#">
+                            <a class="text-slate-800 hover:text-slate-600 transition" href="#">
                                 <li>Facebook</li>
                             </a>
-                            <a href="#">
+                            <a class="text-slate-800 hover:text-slate-600 transition" href="#">
                                 <li>Instagram</li>
                             </a>
-                            <a href="#">
+                            <a class="text-slate-800 hover:text-slate-600 transition" href="#">
                                 <li>Twitter</li>
                             </a>
-                            <a href="#">
+                            <a class="text-slate-800 hover:text-slate-600 transition" href="#">
                                 <li>Maps</li>
                             </a>
                         </ul>
