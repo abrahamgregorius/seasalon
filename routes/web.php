@@ -19,7 +19,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/login', [AuthController::class, 'index']);
+Route::get('/login', [AuthController::class, 'login_get']);
+Route::post('/login', [AuthController::class, 'login_post']);
+Route::get('/register', [AuthController::class, 'login_post']);
 Route::get('/services', [ServiceController::class, 'index']);
 Route::get('/reservations', [ReservationController::class, 'index']);
 Route::get('/reviews', [ReviewController::class, 'index']);
+

@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="navbar border-b-2 p-4">
-        <div class="container flex flex-col sm:items-center sm:flex-row sm:justify-between w-full max-w-[850px] mx-auto my-0 ">
+        <div class="container flex flex-col sm:items-center sm:flex-row sm:justify-between w-full max-w-[1200px] mx-auto my-0 ">
             <div class="navbar-top flex items-center justify-between">
                 <div class="navbar-logo">
                     <a href="/">
@@ -37,7 +37,7 @@
                         <a class="text-slate-800 hover:text-slate-600 transition" href="/login">
                             <li>Login</li>
                         </a>
-                        <a class="px-2 py-1 border-2 text-white bg-red-600 border-red-600 hover:bg-red-700 hover:border-red-700 rounded-xl transition duration-200" href="/reservations">
+                        <a class="px-2 py-1 border-2 text-white bg-red-600 border-red-600 hover:bg-red-700 hover:border-red-700 rounded-lg transition duration-200" href="/reservations">
                             <li>Reservation</li>
                         </a>
                     </ul>
@@ -53,7 +53,7 @@
 
 
     <div class="footer border-t-2 p-8">
-        <div class="container flex flex-col sm:flex-row gap-4 sm:items-start sm:justify-between w-full max-w-[850px] mx-auto my-0">
+        <div class="container flex flex-col sm:flex-row gap-4 sm:items-start sm:justify-between w-full max-w-[1200px] mx-auto my-0">
             <div class="footer-left flex">
                 <h1 class="text-2xl font-bold">SEASalon</h1>
             </div>
