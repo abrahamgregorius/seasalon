@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Review;
 use App\Models\Service;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,6 +16,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        User::create([
+            "name" => "admin",
+            "email" => "admin@mail.com",
+            "phone" => "081312345678",
+            "password" => bcrypt("admin"),
+            "role" => "admin",
+        ]);
+
+
         Service::insert([
             [
                 "name" => 'Cutting',
@@ -38,22 +48,22 @@ class DatabaseSeeder extends Seeder
             [
                 "name" => "Angel",
                 "rating" => 5,
-                "comment" => "a",
+                "comment" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, sint?",
             ],
             [
                 "name" => "Natasha",
-                "rating" => 5,
-                "comment" => "a",
+                "rating" => 3,
+                "comment" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, sint?",
             ],
             [
                 "name" => "Michelle",
-                "rating" => 5,
-                "comment" => "a",
+                "rating" => 4,
+                "comment" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, sint?",
             ],
             [
                 "name" => "Jessica",
                 "rating" => 5,
-                "comment" => "a",
+                "comment" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, sint?",
             ],
         ]);
     }
