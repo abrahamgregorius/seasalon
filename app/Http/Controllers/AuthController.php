@@ -14,20 +14,22 @@ class AuthController extends Controller
     }
 
     public function login_post(Request $request) {
-        if(!Auth::attempt([
+        $check = Auth::attempt([
             'email' => $request->email,
             'password' => $request->password,
-        ])) {
+        ]);
+        
+        if(!$check) {
             return redirect()->back()->with('status', 'Invalid credentials');
         }
-
+        
         $token = uuid_create();
 
         auth()->user()->update([
             'token' => $token
         ]);
 
-        return redirect('/');
+        return redirect('/dashboard');
     }
 
     public function register_get() {
@@ -59,7 +61,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect('/');
+        return redirect('/dashboard');
     }
 
     public function logout_post(Request $request) {
