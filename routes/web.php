@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ServiceController;
+use App\Models\Reservation;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/login', [AuthController::class, 'login_get']);
+Route::get('/login', [AuthController::class, 'login_get'])->middleware('dash');
 Route::post('/login', [AuthController::class, 'login_post']);
 Route::get('/register', [AuthController::class, 'register_get']);
 Route::post('/register', [AuthController::class, 'register_post']);
@@ -32,5 +34,14 @@ Route::get('/reviews', [ReviewController::class, 'index']);
 
 Route::middleware('user')->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::get('/dashboard/reservation', [DashboardController::class, 'reserve_get']);
+    Route::post('/dashboard/reservation', [DashboardController::class, 'reserve_post']);
 });
 
+Route::middleware('admin')->group(function() {
+    Route::get('/admin', [AdminController::class, 'index']);
+    Route::get('/admin/services', [AdminController::class, 'branch_get']);
+    Route::post('/admin/services', [AdminController::class, 'branch_post']);
+    Route::get('/admin/branches', [AdminController::class, 'service_get']);
+    Route::post('/admin/branches', [AdminController::class, 'service_post']);
+});
