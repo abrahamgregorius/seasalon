@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ReviewController;
@@ -27,6 +28,9 @@ Route::post('/logout', [AuthController::class, 'logout_post']);
 
 
 Route::get('/services', [ServiceController::class, 'index']);
-Route::get('/reservations', [ReservationController::class, 'index']);
 Route::get('/reviews', [ReviewController::class, 'index']);
+
+Route::middleware('user')->group(function() {
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+});
 

@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Review;
+use Illuminate\Http\Request;
 
 class ReviewController extends Controller
 {
     public function index() {
-        return view('reviews');
+        $reviews = Review::get();
+
+        return view('reviews', compact('reviews'));
     }
 
     public function create() {

@@ -8,9 +8,16 @@
         <div class="body mt-8 w-full">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 @foreach ($services as $ser)
-                <div class="w-full rounded-lg shadow-lg p-4">
-                    <p class="text-2xl font-semibold">{{ $ser->name }}</p>
-                    <p class="text-slate-600">{{ $ser->duration }} minutes</p>
+                <div class="w-full rounded-lg mx-2 flex flex-row justify-between border-2 items-center shadow-lg p-4 select-none">
+                    <div class="card-left">
+                        <p class="text-2xl font-semibold">{{ $ser->name }}</p>
+                        <p class="text-slate-600">{{ $ser->duration }} minutes</p>
+                    </div>
+                    <div class="card-right">
+                        <a href="/dashboard">
+                            <button class="w-full px-4 py-2 text-white bg-slate-950 hover:bg-slate-800 transition rounded-lg">Reserve</button>
+                        </a>
+                    </div>
                 </div>
                 @endforeach
             </div>

@@ -38,7 +38,7 @@
                         <a class="text-slate-800 hover:text-slate-600 transition" href="/login">
                             <li>Login</li>
                         </a>
-                        <a class="px-2 py-1 border-2 text-white bg-red-600 border-red-600 hover:bg-red-700 hover:border-red-700 rounded-lg transition duration-200" href="/reservations">
+                        <a class="px-2 py-1 border-2 text-white bg-red-600 border-red-600 hover:bg-red-700 hover:border-red-700 rounded-lg transition duration-200" href="/dashboard">
                             <li>Reservation</li>
                         </a>
                         @else
@@ -51,7 +51,7 @@
                         <a class="text-slate-800 hover:text-slate-600 transition" href="/login">
                             <li>Dashboard</li>
                         </a>
-                        <a class="px-2 py-1 border-2 text-white bg-red-600 border-red-600 hover:bg-red-700 hover:border-red-700 rounded-lg transition duration-200" href="/reservations">
+                        <a class="px-2 py-1 border-2 text-white bg-red-600 border-red-600 hover:bg-red-700 hover:border-red-700 rounded-lg transition duration-200" href="/dashboard">
                             <li>Reservation</li>
                         </a>
                         <form action="/logout" method="POST">
