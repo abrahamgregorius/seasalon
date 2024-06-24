@@ -16,13 +16,26 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::create([
-            "name" => "admin",
-            "email" => "admin@mail.com",
-            "phone" => "081312345678",
-            "password" => bcrypt("admin"),
-            "role" => "admin",
+        User::insert([
+            [
+                "name" => "admin",
+                "email" => "admin@mail.com",
+                "phone" => "081312345678",
+                "password" => bcrypt("admin"),
+                "role" => "admin",
+            ],
+            [
+                "name" => "customer",
+                "email" => "customer@mail.com",
+                "phone" => "081312345678",
+                "password" => bcrypt("customer"),
+                "role" => "customer",
+            ],
+        
+        
         ]);
+
+
 
 
         Service::insert([
