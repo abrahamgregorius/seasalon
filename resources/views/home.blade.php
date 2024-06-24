@@ -8,7 +8,7 @@
         <div class="section-2 flex gap-8 flex-col-reverse mt-6 sm:items-center sm:flex-row  sm:my-16">
             <div class="s2-left flex flex-col gap-4 sm:w-[35%]">
                 <div class="text space-y-2">
-                    <h3 class="font-bold text-4xl">Built on passion and ingenuity.</h3>
+                    <h3 class="font-bold text-4xl">Best services for everyone.</h3>
                     <p class="">
                         SEA Salon, the market leader in Indonesia salon business offers premium services and treatments.
                     </p>
@@ -30,7 +30,7 @@
             </div>
             <div class="s3-left flex flex-col gap-4 sm:w-[35%]">
                 <div class="text space-y-2">
-                    <h3 class="font-bold text-4xl">Built on passion and ingenuity.</h3>
+                    <h3 class="font-bold text-4xl">Reserve to experience satisfaction.</h3>
                     <p class="">
                         SEA Salon, the market leader in Indonesia salon business offers premium services and treatments.
                     </p>

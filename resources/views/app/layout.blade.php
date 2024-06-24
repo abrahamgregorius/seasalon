@@ -48,11 +48,8 @@
                         <a class="text-slate-800 hover:text-slate-600 transition" href="/reviews">
                             <li>Reviews</li>
                         </a>
-                        <a class="text-slate-800 hover:text-slate-600 transition" href="/login">
-                            <li>Dashboard</li>
-                        </a>
                         <a class="px-2 py-1 border-2 text-white bg-red-600 border-red-600 hover:bg-red-700 hover:border-red-700 rounded-lg transition duration-200" href="/dashboard">
-                            <li>Reservation</li>
+                            <li>Dashboard</li>
                         </a>
                         <form action="/logout" method="POST">
                             @csrf
