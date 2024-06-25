@@ -13,9 +13,14 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('phone');
             $table->foreignId('user_id')->constrained();
+            $table->foreignId('branch_id')->constrained();
             $table->foreignId('service_id')->constrained();
-            $table->dateTime('datetime');
+            $table->date('date');
+            $table->time('time');
+            $table->enum('status', ['active', 'inactive']);
             $table->timestamps();
         });
     }

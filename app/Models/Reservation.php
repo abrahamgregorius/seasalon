@@ -11,4 +11,12 @@ class Reservation extends Model
 
     protected $guarded = [];
 
+
+    public function service() {
+        return $this->belongsTo(Service::class);
+    }
+
+    public function branch() {
+        return $this->belongsTo(Branch::class);
+    }
 }

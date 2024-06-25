@@ -11,4 +11,9 @@ class Service extends Model
 
     protected $guarded = [];
 
+    
+    public function reservations() {
+        return $this->hasMany(Reservation::class);
+    }
+
 }

@@ -35,7 +35,7 @@ Route::get('/reviews', [ReviewController::class, 'index']);
 Route::middleware('user')->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'index']);
     Route::get('/dashboard/reservation', [DashboardController::class, 'reserve_get']);
-    Route::post('/dashboard/reservation', [DashboardController::class, 'reserve_post']);
+    Route::post('/dashboard/reservation', [ReservationController::class, 'store']);
 });
 
 Route::middleware('admin')->group(function() {

@@ -4,10 +4,14 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Branch;
+use App\Models\BranchService;
 use App\Models\Review;
 use App\Models\Service;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Date;
 
 class DatabaseSeeder extends Seeder
 {
@@ -35,8 +39,23 @@ class DatabaseSeeder extends Seeder
         
         ]);
 
-
-
+        Branch::insert([
+            [
+                'name' => "Branch A",
+                'opening' => Carbon::createFromTime(12, 30, 0)->format('H:i:s'),
+                'closing' => Carbon::createFromTime(18, 30, 0)->format('H:i:s'),
+            ],
+            [
+                'name' => "Branch B",
+                'opening' => Carbon::createFromTime(12, 30, 0)->format('H:i:s'),
+                'closing' => Carbon::createFromTime(18, 30, 0)->format('H:i:s'),
+            ],
+            [
+                'name' => "Branch C",
+                'opening' => Carbon::createFromTime(12, 30, 0)->format('H:i:s'),
+                'closing' => Carbon::createFromTime(18, 30, 0)->format('H:i:s'),
+            ],
+        ]);
 
         Service::insert([
             [
@@ -54,6 +73,13 @@ class DatabaseSeeder extends Seeder
             [
                 "name" => 'Smoothing',
                 "duration" => 90,
+            ],
+        ]);
+
+        BranchService::insert([
+            [
+                'branch_id' => 1,
+                'service_id' => 4,
             ],
         ]);
 

@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function index() {
-        return view('')
+        return view('');
     }
 
     public function branch_get() {
-        return view('')
+        return view('');
     }
 
     public function branch_post() {
@@ -19,7 +19,7 @@ class AdminController extends Controller
     }
 
     public function service_get() {
-        return view('')
+        return view('');
     }
 
     public function service_post() {

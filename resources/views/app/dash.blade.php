@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SEASalon</title>
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
@@ -16,7 +16,7 @@
 -->
 
     <div class="container flex flex-row">
-        <div class="sidebar fixed min-h-screen w-[200px] hidden border-2 bg-muted/40 lg:block">
+        <div class="sidebar fixed min-h-screen w-[160px] sm:w-[200px] border-2 bg-muted/40 block">
             <div class="flex flex-col gap-2">
                 <div class="flex h-[60px] items-center px-6">
                     <a class="flex items-center gap-2 font-semibold" href="/">
@@ -95,20 +95,10 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col w-full ml-[200px]">
+        <div class="navbara flex flex-col w-full ml-[160px] sm:ml-[200px]">
             <header class="flex h-14 lg:h-[60px] items-center gap-4 border-b bg-muted/40 px-6">
-                <a class="lg:hidden" href="/dashboard">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="h-6 w-6">
-                        <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path>
-                        <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"></path>
-                        <path d="M12 3v6"></path>
-                    </svg>
-                    <span class="sr-only">Home</span>
-                </a>
                 <div class="flex-1">
-                    <h1 class="font-semibold text-lg">Dashboard</h1>
+                    <h1 class="font-semibold text-lg flex items-end"><span class="cursor-pointer hover:font-black transition text-2xl mr-2" id="nav-toggle">&equiv;</span> Dashboard</h1>
                 </div>
             </header>
 
@@ -118,6 +108,22 @@
             </div>
         </div>
     </div>
+
+    
+    <script>
+        const navToggle = document.getElementById('nav-toggle')
+        const sideBar = document.querySelector('.sidebar')
+        const navBar = document.querySelector('.navbara')
+
+
+        navToggle.addEventListener('click', () => {
+            sideBar.classList.toggle('hidden')
+            navBar.classList.toggle('ml-[160px]')
+            navBar.classList.toggle('sm:ml-[200px]')
+            
+        })
+    </script>
+    <script src={{ asset('js/jquery.js') }}></script>
 </body>
 
 </html>
