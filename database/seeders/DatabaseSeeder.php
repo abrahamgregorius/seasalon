@@ -42,18 +42,18 @@ class DatabaseSeeder extends Seeder
         Branch::insert([
             [
                 'name' => "Branch A",
-                'opening' => Carbon::createFromTime(12, 30, 0)->format('H:i:s'),
-                'closing' => Carbon::createFromTime(18, 30, 0)->format('H:i:s'),
+                'opening' => 10,
+                'closing' => 18,
             ],
             [
                 'name' => "Branch B",
-                'opening' => Carbon::createFromTime(12, 30, 0)->format('H:i:s'),
-                'closing' => Carbon::createFromTime(18, 30, 0)->format('H:i:s'),
+                'opening' => 10,
+                'closing' => 18,
             ],
             [
                 'name' => "Branch C",
-                'opening' => Carbon::createFromTime(12, 30, 0)->format('H:i:s'),
-                'closing' => Carbon::createFromTime(18, 30, 0)->format('H:i:s'),
+                'opening' => 10,
+                'closing' => 18,
             ],
         ]);
 

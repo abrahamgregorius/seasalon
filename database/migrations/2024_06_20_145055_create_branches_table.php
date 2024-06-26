@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('branches', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->time('opening');
-            $table->time('closing');
+            $table->integer('opening');
+            $table->integer('closing');
             $table->timestamps();
         });
     }
