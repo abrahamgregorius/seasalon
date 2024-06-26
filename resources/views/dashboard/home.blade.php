@@ -18,24 +18,18 @@
 
 <div class="table w-full mt-8 space-y-1">
     <h3 class="text-2xl font-semibold">Active Reservations</h3>
-    <table class="w-full">
+    <table class="table w-full ">
         <thead>
             <tr class="border-2">
-                <th class="border-2 p-2 bg-slate-900 text-white">ID</th>
-                <th class="border-2 p-2 bg-slate-900 text-white">Name</th>
-                <th class="border-2 p-2 bg-slate-900 text-white">Phone</th>
                 <th class="border-2 p-2 bg-slate-900 text-white">Branch</th>
                 <th class="border-2 p-2 bg-slate-900 text-white">Service</th>
                 <th class="border-2 p-2 bg-slate-900 text-white">Date</th>
                 <th class="border-2 p-2 bg-slate-900 text-white">Time</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="overflow-auto">
             @foreach ($reservations as $res)
                 <tr class="border-2">
-                    <td class="border-2 p-2 text-center">{{ $res->id }}</td>    
-                    <td class="border-2 p-2 text-center">{{ $res->name }}</td>    
-                    <td class="border-2 p-2 text-center">{{ $res->phone }}</td>    
                     <td class="border-2 p-2 text-center">{{ $res->branch->name }}</td>    
                     <td class="border-2 p-2 text-center">{{ $res->service->name }}</td>    
                     <td class="border-2 p-2 text-center">{{ $res->date }}</td>    

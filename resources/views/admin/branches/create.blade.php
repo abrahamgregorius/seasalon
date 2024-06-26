@@ -17,7 +17,7 @@
             <div class="form-control flex flex-col">
                 <label class="" for="service">Service</label>
                 <select class="border border-slate-600 rounded px-3 py-1" name="service_id" id="service">
-                    <option value="">Select a Service</option>
+                    <select value="">Select a Service</select>
                     @foreach ($services as $service)
                         <option value={{ $service->id }}>{{ $service->name }}</option>
                     @endforeach
