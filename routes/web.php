@@ -34,14 +34,35 @@ Route::get('/reviews', [ReviewController::class, 'index']);
 
 Route::middleware('user')->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'index']);
-    Route::get('/dashboard/reservation', [DashboardController::class, 'reserve_get']);
-    Route::post('/dashboard/reservation', [ReservationController::class, 'store']);
+    Route::get('/dashboard/reservation', [DashboardController::class, 'branches_get']);
+    Route::get('/dashboard/reservation/{branch_id}', [DashboardController::class, 'reserve_get']);
+    Route::post('/dashboard/reservation/{branch_id}', [ReservationController::class, 'store']);
 });
 
-Route::middleware('admin')->group(function() {
+Route::middleware('admin')->group(function() { 
     Route::get('/admin', [AdminController::class, 'index']);
-    Route::get('/admin/services', [AdminController::class, 'branch_get']);
-    Route::post('/admin/services', [AdminController::class, 'branch_post']);
-    Route::get('/admin/branches', [AdminController::class, 'service_get']);
-    Route::post('/admin/branches', [AdminController::class, 'service_post']);
+    
+    // Branches 
+    Route::get('/admin/branches', [AdminController::class, 'branch_get']);
+    Route::get('/admin/branches', [AdminController::class, 'branch_create']);
+    Route::post('/admin/branches', [AdminController::class, 'branch_store']);
+    Route::get('/admin/branches/{id}/edit', [AdminController::class, 'branch_edit']);
+    Route::post('/admin/branches/{id}/edit', [AdminController::class, 'branch_update']);
+    Route::post('/admin/branches/{id}/delete', [AdminController::class, 'branch_destroy']);
+    
+    // Services
+    Route::get('/admin/services', [AdminController::class, 'service_get']);
+    Route::post('/admin/services/create', [AdminController::class, 'service_create']);
+    Route::post('/admin/services/create', [AdminController::class, 'service_store']);
+    Route::get('/admin/services/{id}/edit', [AdminController::class, 'service_edit']);
+    Route::post('/admin/services/{id}/edit', [AdminController::class, 'service_update']);
+    Route::post('/admin/services/{id}/delete', [AdminController::class, 'service_destroy']);
+    
+    // Reservations
+    Route::post('/admin/reservation/{id}/accept', [AdminController::class, 'service_accept']);
+    Route::post('/admin/reservation/{id}/cancel', [AdminController::class, 'service_cancel']);
+
+
+
+
 });

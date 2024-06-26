@@ -29,7 +29,11 @@ class AuthController extends Controller
             'token' => $token
         ]);
 
-        return redirect('/dashboard');
+        if(auth()->user()->role == "admin") {
+            return redirect('/admin');
+        } else {
+            return redirect('/dashboard');
+        }     
     }
 
     public function register_get() {

@@ -20,11 +20,16 @@ class DashboardController extends Controller
         return view('dashboard.home', compact('active', 'past', 'members', 'reservations'));
     }
 
-    public function reserve_get() {
+    public function branches_get() {
         $branches = Branch::get();
+        return view('dashboard.branches', compact('branches'));
+    }
+
+    public function reserve_get($branch_id) {
         $services = Service::get();
         $date_now = Date::now()->toDateString();
+        $branch = Branch::find($branch_id);
 
-        return view('dashboard.reserve', compact('branches', 'services', 'date_now'));
+        return view('dashboard.reserve', compact('branch', 'services', 'date_now'));
     }
 }
