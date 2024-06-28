@@ -22,10 +22,10 @@ class DatabaseSeeder extends Seeder
     {
         User::insert([
             [
-                "name" => "admin",
-                "email" => "admin@mail.com",
-                "phone" => "081312345678",
-                "password" => bcrypt("admin"),
+                "name" => "Thomas N",
+                "email" => "thomas.n@compfest.id",
+                "phone" => "08123456789",
+                "password" => bcrypt("Admin123"),
                 "role" => "admin",
             ],
             [

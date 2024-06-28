@@ -19,6 +19,7 @@
                 <input required class="border border-slate-600 rounded px-3 py-1" type="number" min="6" max="18" id="closing" name="closing">
             </div>
 
+
         </div>
         
         <div class="form-submit mt-4">

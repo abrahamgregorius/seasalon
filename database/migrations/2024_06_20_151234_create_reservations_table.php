@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained();
             $table->foreignId('branch_id')->constrained();
             $table->foreignId('service_id')->constrained();
-            $table->integer('date');
+            $table->date('date');
             $table->integer('time');
             $table->enum('status', ['active', 'inactive']);
             $table->timestamps();

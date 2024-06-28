@@ -26,10 +26,12 @@ class AdminController extends Controller
     }
 
     public function branch_create() {
-        return view('admin.branches.create');
+        $services = Service::get();
+        return view('admin.branches.create', compact('services'));
     }
 
     public function branch_store(Request $request) {
+        dd($request);
         Branch::create($request->all());
         return redirect('/admin/branches');
     }
@@ -89,7 +91,7 @@ class AdminController extends Controller
         $reservation->update([
             'status' => 'inactive'
         ]);
-        return redirect('/admin/reservation')->with('status', "Reservation Confirmed");
+        return redirect('/admin')->with('status', "Reservation Confirmed");
     }
 
     public function service_cancel($id) {
@@ -97,7 +99,7 @@ class AdminController extends Controller
         $reservation->update([
             'status' => 'inactive'
         ]);
-        return redirect('/admin/reservation')->with('status', "Reservation Canceled");
+        return redirect('/admin')->with('status', "Reservation Canceled");
     }
 
 }

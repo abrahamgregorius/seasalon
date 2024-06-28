@@ -30,7 +30,7 @@
             </div>
 
             <div class="form-control flex flex-col">
-                <label class="" for="time">Time in hour (24h)</label>
+                <label class="" for="time">Reservation Time in Hour</label>
                 <input required class="border border-slate-600 rounded px-3 py-1" value={{ $branch->opening }} min="{{ $branch->opening }}" max="{{ $branch->closing }}" type="number" id="time" name="time">
             </div>
 
