@@ -44,15 +44,15 @@ Route::middleware('admin')->group(function() {
     
     // Branches 
     Route::get('/admin/branches', [AdminController::class, 'branch_get']);
-    Route::get('/admin/branches', [AdminController::class, 'branch_create']);
-    Route::post('/admin/branches', [AdminController::class, 'branch_store']);
+    Route::get('/admin/branches/create', [AdminController::class, 'branch_create']);
+    Route::post('/admin/branches/create', [AdminController::class, 'branch_store']);
     Route::get('/admin/branches/{id}/edit', [AdminController::class, 'branch_edit']);
     Route::post('/admin/branches/{id}/edit', [AdminController::class, 'branch_update']);
     Route::post('/admin/branches/{id}/delete', [AdminController::class, 'branch_destroy']);
     
     // Services
     Route::get('/admin/services', [AdminController::class, 'service_get']);
-    Route::post('/admin/services/create', [AdminController::class, 'service_create']);
+    Route::get('/admin/services/create', [AdminController::class, 'service_create']);
     Route::post('/admin/services/create', [AdminController::class, 'service_store']);
     Route::get('/admin/services/{id}/edit', [AdminController::class, 'service_edit']);
     Route::post('/admin/services/{id}/edit', [AdminController::class, 'service_update']);

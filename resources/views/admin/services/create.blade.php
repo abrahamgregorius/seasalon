@@ -5,36 +5,14 @@
         @csrf
         <div class="form-controls space-y-2">
             <div class="form-control flex flex-col">
-                <label class="" for="name">Name</label>
+                <label class="" for="name">Service Name</label>
                 <input required class="border border-slate-600 rounded px-3 py-1" type="text" id="name" name="name">
             </div>
             
             <div class="form-control flex flex-col">
-                <label class="" for="phone">Phone</label>
-                <input required class="border border-slate-600 rounded px-3 py-1" type="text" id="phone" name="phone">
+                <label class="" for="duration">Duration in minutes</label>
+                <input required class="border border-slate-600 rounded px-3 py-1" type="number" min="1" max="180" id="duration" name="duration">
             </div>
-    
-            <div class="form-control flex flex-col">
-                <label class="" for="service">Service</label>
-                <select class="border border-slate-600 rounded px-3 py-1" name="service_id" id="service">
-                    <option value="">Select a Service</option>
-                    @foreach ($services as $service)
-                        <option value={{ $service->id }}>{{ $service->name }}</option>
-                    @endforeach
-                </select>
-            </div>
-            
-            <div class="form-control flex flex-col">
-                <label class="" for="date">Date</label>
-                <input required class="border border-slate-600 rounded px-3 py-1" min="{{ $date_now }}" type="date" id="date" name="date">
-            </div>
-
-            <div class="form-control flex flex-col">
-                <label class="" for="time">Time in hour (24h)</label>
-                <input required class="border border-slate-600 rounded px-3 py-1" value={{ $branch->opening }} min="{{ $branch->opening }}" max="{{ $branch->closing }}" type="number" id="time" name="time">
-            </div>
-
-
         </div>
         
         <div class="form-submit mt-4">

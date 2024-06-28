@@ -25,8 +25,29 @@ class AdminController extends Controller
         return view('admin.branches', compact('branches'));
     }
 
-    public function branch_post() {
+    public function branch_create() {
+        return view('admin.branches.create');
+    }
+
+    public function branch_store(Request $request) {
+        Branch::create($request->all());
         return redirect('/admin/branches');
+    }
+
+    public function branch_edit(Request $request, $id) {
+        $branch = Branch::find($id);
+        return view('admin.branches.edit', compact('branch'));
+    }
+
+    public function branch_update(Request $request, $id) {
+        $branch = Branch::find($id);
+        $branch->update($request->all());
+        return redirect('/admin/branches');
+    }
+
+    public function branch_destroy($id) {
+        $branch = Branch::find($id)->delete();
+        return redirect()->back();
     }
 
     public function service_get() {
@@ -34,21 +55,31 @@ class AdminController extends Controller
         return view('admin.services', compact('services'));
     }
 
-    public function service_post() {
-        return redirect('/admin/services');
-    }
-
     public function service_create() {
-        return redirect('/admin/services');
+        return view('admin.services.create');
     }
 
+    public function service_store(Request $request) {
+        Service::create($request->all());
+        return redirect('/admin/services');
 
+    }
+
+    public function service_destroy($id) {
+        Service::find($id)->delete();
+        return redirect()->back();
+    }
 
 
     public function service_edit($id) {
-        $services = Service::get();
-        return view('admin.services', compact('services'));
+        $service = Service::find($id);
+        return view('admin.services.edit', compact('service'));
 
+    }
+    public function service_update(Request $request, $id) {
+        $service = Service::find($id);
+        $service->update($request->all());
+        return redirect('/admin/services');
     }
 
 

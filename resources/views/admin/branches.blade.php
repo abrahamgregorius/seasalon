@@ -2,8 +2,13 @@
 @section('content')
 
 <div class="w-full space-y-1">
-    <h3 class="text-2xl font-semibold">Branches</h3>
-    <table class="table w-full ">
+    <div class="flex flex-row justify-between items-center">
+        <h3 class="text-2xl font-semibold">Branches</h3>
+        <a href="/admin/branches/create">
+            <button class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white transition rounded-lg">Add new</button>
+        </a>
+    </div>
+    <table class="table w-full">
         <thead>
             <tr class="border-2">
                 <th class="border-2 p-2 bg-slate-900 text-white">Branch</th>

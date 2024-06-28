@@ -5,35 +5,19 @@
         @csrf
         <div class="form-controls space-y-2">
             <div class="form-control flex flex-col">
-                <label class="" for="name">Name</label>
-                <input required class="border border-slate-600 rounded px-3 py-1" type="text" id="name" name="name">
+                <label class="" for="name">Branch Name</label>
+                <input value={{ $branch->name }} class="border border-slate-600 rounded px-3 py-1" type="text" id="name" name="name">
             </div>
             
             <div class="form-control flex flex-col">
-                <label class="" for="phone">Phone</label>
-                <input required class="border border-slate-600 rounded px-3 py-1" type="text" id="phone" name="phone">
-            </div>
-    
-            <div class="form-control flex flex-col">
-                <label class="" for="service">Service</label>
-                <select class="border border-slate-600 rounded px-3 py-1" name="service_id" id="service">
-                    <option value="">Select a Service</option>
-                    @foreach ($services as $service)
-                        <option value={{ $service->id }}>{{ $service->name }}</option>
-                    @endforeach
-                </select>
-            </div>
-            
-            <div class="form-control flex flex-col">
-                <label class="" for="date">Date</label>
-                <input required class="border border-slate-600 rounded px-3 py-1" min="{{ $date_now }}" type="date" id="date" name="date">
+                <label class="" for="opening">Opening Hour</label>
+                <input value={{ $branch->opening }} class="border border-slate-600 rounded px-3 py-1" type="number" min="6" max="18" id="opening" name="opening">
             </div>
 
             <div class="form-control flex flex-col">
-                <label class="" for="time">Time in hour (24h)</label>
-                <input required class="border border-slate-600 rounded px-3 py-1" value={{ $branch->opening }} min="{{ $branch->opening }}" max="{{ $branch->closing }}" type="number" id="time" name="time">
+                <label class="" for="closing">Closing Hour</label>
+                <input value={{ $branch->closing }} class="border border-slate-600 rounded px-3 py-1" type="number" min="6" max="18" id="closing" name="closing">
             </div>
-
 
         </div>
         
