@@ -16,11 +16,11 @@ This project was made by Abraham Gregorius as an assignment for COMPFEST 2024 ho
 ### Credentials
 
 - admin
-email: [thomas.n@compfest.id](mailto:thomas.n@compfest.id)
-password: Admin123
+  - email: [thomas.n@compfest.id](mailto:thomas.n@compfest.id)
+  - password: Admin123
 - customer
-email: [customer@mail.com](mailto:customer@mail.com)
-password: customer
+  - email: [customer@mail.com](mailto:customer@mail.com)
+  - password: customer
 
 ---
 
