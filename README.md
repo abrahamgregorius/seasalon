@@ -24,17 +24,26 @@ This project was made by Abraham Gregorius as an assignment for COMPFEST 2024 ho
 
 ---
 
-Initialize the app
+1. Initialize the app
 
 ```bash
 composer install
 ```
 
-Rename `.env.example` to `.env`
 
-Set the database configs to match your device configs
+2. Rename `.env.example` to `.env`
+
+3. Generate the application key
 
 ```bash
+php artisan key:generate
+```
+
+4. Set the database configs to match your device configs
+
+```bash
+/.env
+
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
