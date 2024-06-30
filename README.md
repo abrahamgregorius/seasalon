@@ -56,8 +56,10 @@ Run these commands seperately
 
 ```bash
 php artisan migrate --seed
+```
 
-# After process is finished, run the command below
+Initialize Node.js
+```bash
 npm install
 ```
 
