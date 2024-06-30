@@ -63,9 +63,7 @@ class AuthController extends Controller
             'role' => "customer",
         ]);
 
-        Auth::login($user);
-
-        return redirect('/dashboard');
+        return redirect('/login')->with('success', 'Successfully created an account');
     }
 
     public function logout_post(Request $request) {

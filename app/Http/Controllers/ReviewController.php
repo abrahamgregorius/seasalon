@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ReviewController extends Controller
 {
     public function index() {
-        $reviews = Review::get();
+        $reviews = collect(Review::get())->sortByDesc('rating')->all();
 
         return view('reviews', compact('reviews'));
     }
@@ -25,9 +25,5 @@ class ReviewController extends Controller
         ]);
 
         return redirect('/reviews');
-    }
-
-    public function edit() {
-        return view('reviews.edit');
     }
 }

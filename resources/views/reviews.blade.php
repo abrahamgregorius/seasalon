@@ -6,7 +6,7 @@
                 <h1 class="text-4xl sm:text-6xl font-bold">Honest Reviews</h1>
                 <p class="text-slate-700 w-[75%] sm:w-full">Check out our satisfied members' ratings and reviews</p>
             </div>
-            <a href="/dashboard">
+            <a href="/reviews/create">
                 <button class="w-full px-4 py-2 text-white bg-slate-950 hover:bg-slate-800 transition rounded-lg">Leave a review</button>
             </a>
         </div>
